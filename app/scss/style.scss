@@ -2,7 +2,6 @@
 @import "global";
 @import "fonts";
 
-
 // Start Header
 .header {
 	&__top {
@@ -68,17 +67,16 @@
 		&__list {
 			li {
 				display: inline-block;
-			& + li {
-				margin-left: 30px;
-			}	
+				& + li {
+					margin-left: 30px;
+				}
 			}
 			a {
 				color: #fff;
-				font-weight: 600;
+				@include f600;
 				font-size: 14px;
 			}
 		}
-
 	}
 }
 
@@ -99,14 +97,14 @@
 	&__inner-title {
 		margin-bottom: 10px;
 		font-size: 48px;
-		font-weight: 700;
+		@include f700;
 		line-height: 72px;
 	}
 
 	&__inner-subtitle {
 		margin-bottom: 50px;
 		font-size: 20px;
-		font-weight: 500;
+		@include f500;
 		line-height: 30px;
 	}
 
@@ -116,22 +114,22 @@
 		position: relative;
 		input {
 			display: block;
-			width:100%;
+			width: 100%;
 			box-shadow: 0 1px 10px 0 rgb(100 100 100 / 75%);
 			border-radius: 4px;
 			height: 56px;
-			border:none;
+			border: none;
 			font-size: 14px;
-			font-weight: 500;
+			@include f500;
 			padding-left: 25px;
 			padding-right: 60px;
-			outline:none;
-			&:focus{
+			outline: none;
+			&:focus {
 				border: 1px solid $green;
 			}
-			&::placeholder{
+			&::placeholder {
 				color: #90a4ae;
-				font-weight: 500;
+				@include f500;
 			}
 		}
 		button {
@@ -151,7 +149,6 @@
 	background-color: #f4f6f5;
 
 	&__title {
-
 	}
 
 	&__inner {
@@ -169,7 +166,7 @@
 			& + button {
 				margin-left: 4px;
 			}
-			&.mixitup-control-active{
+			&.mixitup-control-active {
 				background-color: $red;
 				color: #fff;
 			}
@@ -184,14 +181,13 @@
 }
 
 .product {
-
 	&__item {
 		border: 1px solid #e7ecf2;
 		max-width: 342px;
 		width: 100%;
 		margin-bottom: 30px;
 		background-color: #fff;
-		&-img{
+		&-img {
 			min-height: 250px;
 			background-repeat: no-repeat;
 			display: block;
@@ -206,9 +202,8 @@
 		padding: 10px 30px;
 		min-height: 90px;
 		align-items: center;
-		font-weight: 500;
+		@include f500;
 		border-bottom: 1px solid #e7ecf2;
-
 	}
 
 	&__item-name {
@@ -225,11 +220,10 @@
 		display: block;
 		font-size: 14px;
 		color: $green;
-	
 	}
 
 	&__item-price {
-		font-weight: 700;
+		@include f700;
 		font-size: 20px;
 		color: $bg;
 	}
@@ -246,7 +240,7 @@
 		display: flex;
 		align-items: center;
 		max-width: 245px;
-		.avatar{
+		.avatar {
 			width: 30px;
 			height: 30px;
 			border-radius: 50%;
@@ -255,37 +249,35 @@
 			background-repeat: no-repeat;
 			background-size: cover;
 		}
-		span{
+		span {
 			font-size: 14px;
-			font-weight: 500;
+			@include f500;
 			margin-left: 25px;
 		}
-
-
 	}
 
 	&__item-star {
 		font-size: 12px;
-		span{
+		span {
 			color: $bg;
 		}
 	}
 }
-.products__bottom-btn{
+.products__bottom-btn {
 	text-align: center;
-	button{
+	button {
 		margin: 45px 5px 0px;
 		border: 1px solid $green;
 		background-color: #fff;
 		color: $bg;
 		padding: 20px 30px;
 		cursor: pointer;
-		font-weight: 700;
+		@include f700;
 		font-size: 16px;
-		&.mixitup-control-active{
+		&.mixitup-control-active {
 			background-color: $green;
 			color: #fff;
-	}
+		}
 	}
 }
 
@@ -302,7 +294,7 @@
 		display: inline-block;
 		margin-left: 3px;
 		margin-right: 3px;
-		&.slick-active{
+		&.slick-active {
 			button {
 				background-color: $green;
 			}
@@ -319,6 +311,72 @@
 		}
 	}
 }
-	
 
 // Slider end
+
+// Advantages start
+.advantages {
+	background-color: $bg;
+	padding: 110px 0;
+	&__title {
+		color: #fff;
+	}
+
+	&__inner {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__item {
+		max-width: 370px;
+		text-align: center;
+		padding: 0 15px;
+		
+		&:hover{
+			.advantages__item-images {
+				background-color: $green;
+			}
+			.advantages__item-title {
+				color: $green;
+			}
+			.advantages__item-images {
+				svg {
+					fill: #fff;
+				}
+			}
+		}
+	}
+
+	&__item-images {
+		width: 114px;
+		height: 114px;
+		background-color: #fff;
+		border-radius: 50%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin: 0 auto;
+		margin-bottom: 30px;
+		transition: all .3s ease 0s;
+	}
+
+	&__item-title {
+		display: block;
+		color: #fff;
+		margin-bottom: 25px;
+		@include f500;
+		font-size: 24px;
+		transition: all .6s ease 0s;
+	}
+
+	&__item-text {
+		color: #fff;
+		font-size: 15px;
+	}
+}
+.container {
+}
+.title {
+}
+
+// Advantages end
