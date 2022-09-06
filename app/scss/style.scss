@@ -380,3 +380,39 @@
 }
 
 // Advantages end
+// Author start
+.author {
+	
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	min-height: 700px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	&__box {
+		max-width: 620px;
+		width: 100%;
+		min-height: 215px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background-color: $green;
+	}
+
+	&__box-title {
+		line-height: 30px;
+		font-size: 30px;
+		color: #fff;
+		margin-right: 45px;
+	}
+
+	&__link {
+		font-size: 18px;
+		line-height: 36px;
+		padding: 14px 40px;
+		background-color: #fff;
+	}
+}
+
+// Author end
