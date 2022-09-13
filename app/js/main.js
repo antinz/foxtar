@@ -1,7 +1,5 @@
 $(function () {
 
-	var mixer = mixitup('.products__inner-box');
-
 	$(".rate-star").rateYo({
 		rating: 5,
 		readOnly: true,
@@ -16,4 +14,27 @@ $(function () {
 		slidesToScroll: 4
 	});
 
+	$('.js-range-slider').ionRangeSlider({
+		type: "single",
+		min: 0,
+		max: 1000,
+		from: 200,
+		to: 500,
+		grid: true
+	});
+
+	$('.icon-th-list').on('click', function () {
+		$('.product__item').addClass('list');
+		$('.icon-th-list').addClass('active');
+		$('.icon-th-large').removeClass('active');
+	});
+	$('.icon-th-large').on('click', function () {
+		$('.product__item').removeClass('list');
+		$('.icon-th-large').addClass('active');
+		$('.icon-th-list').removeClass('active');
+	});
+
+	
+
+	var mixer = mixitup('.products__inner-box');
 });

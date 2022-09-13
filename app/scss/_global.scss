@@ -1,9 +1,15 @@
 html {
 	box-sizing: border-box;
-
 }
 
-*, *::before, *::after {
+html,
+body {
+	height: 100%;
+}
+
+*,
+*::before,
+*::after {
 	box-sizing: inherit;
 }
 
@@ -13,18 +19,31 @@ a {
 	color: $text;
 }
 
-ul, li {
+ul,
+li {
 	margin: 0;
 	padding: 0;
 	list-style-type: none;
 }
 
 body {
-	font-family: 'Roboto-Regular', sans-serif;
+	font-family: "Roboto-Regular", sans-serif;
 	font-size: 15px;
 	line-height: 24px;
 	color: $text;
 	font-weight: 400;
+}
+
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	min-height: 100%;
+}
+.content {
+	flex: 1 0 auto;
+}
+.footer {
+	flex: 0 0 auto;
 }
 
 .container {
@@ -32,13 +51,17 @@ body {
 	margin: 0 auto;
 	padding: 0 15px;
 }
-.container-fluid{
+.container-fluid {
 	max-width: 100%;
 	margin: 0 auto;
 	padding: 0 30px;
 }
+
+.page-content{
+	background-color: $grey;
+}
 @media (max-width: 720px) {
-	.container-fluid{
+	.container-fluid {
 		padding: 0 15px;
 	}
 }
@@ -55,4 +78,36 @@ body {
 .rate-star {
 	display: inline-block;
 	margin-right: 13px;
+}
+
+.breadcrumbs {
+	&__inner {
+		padding: 45px 0 40px;
+	}
+
+	&__list {
+		li{
+			display: inline-block;
+			position: relative;
+			& + li{
+				padding-left: 24px;
+				&::before{
+					content: '-';
+					position: absolute;
+					color: $green;
+					left: 8px;
+				}
+			}
+			&:last-child{
+				a,
+				span{
+					color: $bg;
+				}
+			}
+		}
+		a{
+			color: #b0bec5;
+		}
+	}
+
 }
