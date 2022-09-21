@@ -34,10 +34,10 @@ $(function () {
 		$('.icon-th-list').removeClass('active');
 	});
 
-	$('.product-details__tabs .tab').on('click', function (event) {
+	$('.product-details__tabs .tab, .settings__tabs .tab').on('click', function (event) {
 		var id = $(this).attr('data-id');
-		$('.product-details__tabs').find('.tab-item').removeClass('active-tab').hide();
-		$('.product-details__tabs .tabs').find('.tab').removeClass('active');
+		$('.product-details__tabs, .settings__tabs').find('.tab-item').removeClass('active-tab').hide();
+		$('.product-details__tabs .tabs, .settings__tabs .tabs').find('.tab').removeClass('active');
 		$(this).addClass('active');
 		$('#' + id).addClass('active-tab').fadeIn();
 		return false;
