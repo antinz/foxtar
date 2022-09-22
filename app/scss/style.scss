@@ -2030,20 +2030,20 @@
 
 // Page Profile start
 
-.profile__inner{
+.profile__inner {
 	display: flex;
 	margin-bottom: 30px;
 }
 
-.profile__aside{
+.profile__aside {
 	margin-right: 30px;
 	max-width: 270px;
 	width: 100%;
-	.footer__social-link{
+	.footer__social-link {
 		margin-bottom: 20px;
 	}
 }
-.profile__content{
+.profile__content {
 	width: 100%;
 }
 .profile__status {
@@ -2074,7 +2074,7 @@
 }
 .profile__aside-btn {
 	margin-bottom: 13px;
-	text-align:center;
+	text-align: center;
 	.profile__aside-message {
 		margin-bottom: 17px;
 		display: block;
@@ -2085,13 +2085,13 @@
 		padding: 18px 10px;
 		background-color: $text;
 		position: relative;
-		&:before{
-			content: '\f003';
+		&:before {
+			content: "\f003";
 			position: absolute;
 			top: 17px;
 			font-size: 16px;
 			left: 50px;
-			font-family: 'icomoon';
+			font-family: "icomoon";
 			color: #fff;
 		}
 	}
@@ -2107,105 +2107,101 @@
 	}
 }
 
-.profile__banner{
+.profile__banner {
 	padding: 20px;
 	border: 1px solid #dedede;
 	background-color: #fff;
 	margin-bottom: 45px;
 }
 
-.profile__banner-images{
+.profile__banner-images {
 	background-position: center;
 	background-size: cover;
 	background-repeat: no-repeat;
 	min-height: 332px;
 }
 
-.profile__items{
+.profile__items {
 	display: flex;
 	border: 1px solid #dedede;
 }
 
-.profile__item{
+.profile__item {
 	width: 25%;
 	background-color: #fff;
 	text-align: center;
 	padding: 20px 5px 17px;
-	& +.profile__item{
+	& + .profile__item {
 		border-left: 1px solid #dedede;
 	}
-
 }
 
-.profile__item-title{
+.profile__item-title {
 	@include f500;
 	font-size: 14px;
 	color: $bg;
-	
 }
-.profile__item-content{
+.profile__item-content {
 	color: #707070;
 	font-size: 14px;
 	@include f500;
 }
 
-.profile-settings{
-	.product-details__tabs.settings__tabs{
-		.tabs span{
-			font-family: 'Roboto', sans-serif !important;
+.profile-settings {
+	.product-details__tabs.settings__tabs {
+		.tabs span {
+			font-family: "Roboto", sans-serif !important;
 			font-weight: 500;
 			color: #707070;
 			position: relative;
-			&.active:before{
+			&.active:before {
 				color: $green;
 			}
-			&:before{
-				font-family: 'icomoon';
+			&:before {
+				font-family: "icomoon";
 				position: absolute;
 				left: 27px;
 				top: 16px;
 				color: #d0d0d0;
 				font-size: 14px;
-				font-family: 'icomoon';
+				font-family: "icomoon";
 			}
 		}
-	} 
-	
-
+	}
 }
-.profile__box{
+.profile__box {
 	background-color: #fff;
 	padding: 35px 40px 25px;
 	border: 1px solid #dedede;
 }
 
-.profile__box-title{
+.profile__box-title {
 	margin-bottom: 25px;
 	@include f700;
 	color: $bg;
 	font-size: 20px;
 }
-.profile__box-text{
+.profile__box-text {
 	margin-bottom: 40px;
-	p{
+	p {
 		color: #707070;
 	}
 }
 
-.profile__box-item-head{
+.profile__box-item-head {
 	display: flex;
 	justify-content: space-between;
 	margin-bottom: 16px;
 }
 
-.profile__box-item-name{
+.profile__box-item-name {
 	@include f500;
 	font-size: 16px;
 	color: $bg;
 	font-style: italic;
 }
 
-.profile__box-item-number{
+.profile__box-item-number {
 	@include f700;
 	font-size: 16px;
 	color: $bg;
@@ -2213,12 +2209,12 @@
 	justify-content: flex-end;
 }
 
-.profile__box-item-line{
+.profile__box-item-line {
 	height: 15px;
 	background-color: #f4f4f4;
 	border-radius: 3px;
 	margin-bottom: 23px;
-	span{
+	span {
 		display: block;
 		border-radius: 3px;
 		height: 15px;
@@ -2227,8 +2223,138 @@
 }
 
 // Page Settings end
+// Page Upload start
+.upload__inner {
+	background-color: #fff;
+	border: 1px solid #d7d7d7;
+	margin-bottom: 110px;
+	button {
+		color: #fff;
+		background-color: $green;
+		border: none;
+		padding: 15px 36px;
+		margin-left: 175px;
+		cursor: pointer;
+	}
+}
 
+.upload__inner-title {
+	@include f500;
+	font-size: 24px;
+	padding: 16px 35px 18px;
+	color: $bg;
+	border-bottom: 1px solid #d7d7d7;
+	margin-bottom: 40px;
+}
 
+.upload__inner-content {
+	margin-bottom: 30px;
+	padding-left: 45px;
+	padding-right: 50px;
+}
 
+.upload-line {
+	margin-bottom: 25px;
+	display: flex;
+	label {
+		padding-top: 5px;
+		min-width: 175px;
+		padding-right: 15px;
+		color: #444;
+		span {
+			color: $green;
+		}
+		&::placeholder {
+			color: #707070;
+		}
+	}
+	select,
+	input,
+	textarea {
+		width: 100%;
+		display: block;
+		border: 1px solid #d7d7d7;
+		height: 40px;
+		background-color: #f9f9f9;
+		padding: 0px 18px;
+	}
+	textarea {
+		resize: vertical;
+		min-height: 150px;
+		padding: 8px 18px;
+	}
+	.jq-selectbox {
+		width: 100%;
+	}
+
+	.jq-file__browse {
+		top: 5px;
+		right: auto;
+		left: 9px;
+		font-size: 12px;
+		line-height: 26px;
+		padding: 0 12px;
+		border: 1px solid #d7d7d7;
+		border-radius: 0;
+		background: #fff;
+		box-shadow: none;
+		text-shadow: none;
+		color: #444;
+
+	}
+
+	.jq-file {
+		width: 100%;
+		border-radius: 0px;
+		box-shadow: none;
+		border: 1px solid #d7d7d7;
+		height: 40px;
+		background-color: #f9f9f9;
+	}
+	.jq-file__name {
+		box-sizing: border-box;
+		width: 100%;
+		height: 40px;
+		padding: 8px 18px;
+		border: none;
+		margin-left: 100px;
+		border-bottom-color: transparent;
+		border-radius: 0px;
+		background: transparent;
+		box-shadow: none;
+		font-size: 12px;
+		color: #707070;
+		line-height: 25px;
+	}
+	.jq-selectbox__select {
+		height: 40px;
+		padding: 0px 18px;
+		border: 1px solid #d7d7d7;
+		border-bottom-color: #d7d7d7;
+		border-radius: 0px;
+		background: #f9f9f9;
+		box-shadow: none;
+		font-family: "Roboto-Regular", sans-serif;
+		color: #707070;
+		text-shadow: none;
+		line-height: 40px;
+	}
+	.jq-selectbox__trigger {
+		border-left: none;
+	}
+	.jq-selectbox__trigger-arrow {
+		border: none;
+		top: 0;
+		right: 20px;
+		font-size: 15px;
+		line-height: 35px;
+		&:before {
+			content: "\f0dd";
+			font-family: "icomoon";
+		}
+	}
+}
+
+// Page Upload end
 
 @import "media";
