@@ -1940,7 +1940,7 @@
 // Page Contacts end
 
 // Page Settings start
-.settings{
+.settings {
 	padding-bottom: 100px;
 }
 .product-details__tabs.settings__tabs {
@@ -1969,7 +1969,7 @@
 				color: $bg;
 				@include f500;
 				border-bottom: 3px solid $green;
-				&:before{
+				&:before {
 					color: $green;
 				}
 			}
@@ -1983,30 +1983,30 @@
 	}
 }
 
-.page__box{
+.page__box {
 	background-color: #fff;
 	min-height: 100%;
 }
-.page__box-title{
+.page__box-title {
 	border-bottom: 1px solid #dedede;
 	padding: 18px 34px;
 	font-size: 24px;
 	@include f500;
 	color: $bg;
 }
-.page__box-content{
+.page__box-content {
 	padding: 30px 35px 80px;
 }
 
-.settings__line{
+.settings__line {
 	margin-bottom: 21px;
 	display: flex;
 	align-items: center;
-	label{
+	label {
 		width: 260px;
 		color: #444;
 	}
-	input{
+	input {
 		min-width: 540px;
 		width: 100%;
 		height: 40px;
@@ -2015,7 +2015,7 @@
 		background-color: #f9f9f9;
 		padding: 0 10px;
 	}
-	select{
+	select {
 		min-width: 540px;
 		width: 100%;
 		height: 40px;
@@ -2027,5 +2027,208 @@
 	}
 }
 // Page Settings end
+
+// Page Profile start
+
+.profile__inner{
+	display: flex;
+	margin-bottom: 30px;
+}
+
+.profile__aside{
+	margin-right: 30px;
+	max-width: 270px;
+	width: 100%;
+	.footer__social-link{
+		margin-bottom: 20px;
+	}
+}
+.profile__content{
+	width: 100%;
+}
+.profile__status {
+	color: #707070;
+	font-size: 13px;
+	padding: 6px 9px 5px 30px;
+	border: 1px solid #d6d6d6;
+	position: relative;
+	&:before {
+		position: absolute;
+		content: "";
+		left: 11px;
+		width: 9px;
+		height: 9px;
+		border-radius: 50%;
+		top: 13px;
+	}
+}
+.profile-on {
+	&:before {
+		background-color: $green;
+	}
+}
+.profile-off {
+	&:before {
+		background-color: $red;
+	}
+}
+.profile__aside-btn {
+	margin-bottom: 13px;
+	text-align:center;
+	.profile__aside-message {
+		margin-bottom: 17px;
+		display: block;
+		width: 100%;
+		font-size: 16px;
+		color: #fff;
+		@include f500;
+		padding: 18px 10px;
+		background-color: $text;
+		position: relative;
+		&:before{
+			content: '\f003';
+			position: absolute;
+			top: 17px;
+			font-size: 16px;
+			left: 50px;
+			font-family: 'icomoon';
+			color: #fff;
+		}
+	}
+	.profile__aside-follow {
+		margin-bottom: 17px;
+		display: block;
+		width: 100%;
+		font-size: 16px;
+		color: #fff;
+		@include f700;
+		background-color: $green;
+		padding: 18px 10px;
+	}
+}
+
+.profile__banner{
+	padding: 20px;
+	border: 1px solid #dedede;
+	background-color: #fff;
+	margin-bottom: 45px;
+}
+
+.profile__banner-images{
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	min-height: 332px;
+}
+
+.profile__items{
+	display: flex;
+	border: 1px solid #dedede;
+}
+
+.profile__item{
+	width: 25%;
+	background-color: #fff;
+	text-align: center;
+	padding: 20px 5px 17px;
+	& +.profile__item{
+		border-left: 1px solid #dedede;
+	}
+
+}
+
+.profile__item-title{
+	@include f500;
+	font-size: 14px;
+	color: $bg;
+	
+}
+.profile__item-content{
+	color: #707070;
+	font-size: 14px;
+	@include f500;
+}
+
+.profile-settings{
+	.product-details__tabs.settings__tabs{
+		.tabs span{
+			font-family: 'Roboto', sans-serif !important;
+			font-weight: 500;
+			color: #707070;
+			position: relative;
+			&.active:before{
+				color: $green;
+			}
+			&:before{
+				font-family: 'icomoon';
+				position: absolute;
+				left: 27px;
+				top: 16px;
+				color: #d0d0d0;
+				font-size: 14px;
+				font-family: 'icomoon';
+			}
+		}
+	} 
+	
+
+}
+.profile__box{
+	background-color: #fff;
+	padding: 35px 40px 25px;
+	border: 1px solid #dedede;
+}
+
+.profile__box-title{
+	margin-bottom: 25px;
+	@include f700;
+	color: $bg;
+	font-size: 20px;
+}
+.profile__box-text{
+	margin-bottom: 40px;
+	p{
+		color: #707070;
+	}
+}
+
+.profile__box-item-head{
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 16px;
+}
+
+.profile__box-item-name{
+	@include f500;
+	font-size: 16px;
+	color: $bg;
+	font-style: italic;
+}
+
+.profile__box-item-number{
+	@include f700;
+	font-size: 16px;
+	color: $bg;
+	display: flex;
+	justify-content: flex-end;
+}
+
+.profile__box-item-line{
+	height: 15px;
+	background-color: #f4f4f4;
+	border-radius: 3px;
+	margin-bottom: 23px;
+	span{
+		display: block;
+		border-radius: 3px;
+		height: 15px;
+		background-color: $green;
+	}
+}
+
+// Page Settings end
+
+
+
 
 @import "media";
