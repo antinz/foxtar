@@ -498,7 +498,7 @@
 			background-color: $bg;
 		}
 	}
-	.create-ac{
+	.create-acc{
 		width: 100%;
 	}
 	.login__wrapper button{
@@ -536,6 +536,14 @@
 	}
 	.about__inner {
 		padding: 0px 15px;
+	}
+	.product__slider li button{
+		width: 10px;
+		height: 10px;
+	}
+	.product__slider li{
+		margin-left: 2px;
+		margin-right: 2px;
 	}
 }
 
